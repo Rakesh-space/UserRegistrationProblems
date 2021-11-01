@@ -5,10 +5,10 @@ namespace UserRegistrationProblems
 {
     class ValidatingRegex
     {
-        public static void validLastName()
+        public static void validEmail()
         {
-            string[] inputs = { "Musale" };
-            string pattern = "^[A-Za-z]{3,}$";
+            string[] inputs = { "rakeshmusale111@gmail.com" };
+            string pattern = "^[a-z0-9]{15}@?gmail.com$";
 
             Regex regex = new Regex(pattern);
 
@@ -27,7 +27,7 @@ namespace UserRegistrationProblems
 
         static void Main(string[] args)
         {
-            validLastName();
+            validEmail();
         }
 
     }
