@@ -5,10 +5,10 @@ namespace UserRegistrationProblems
 {
     class ValidatingRegex
     {
-        public static void passowordFormat()
+        public static void UpperCaseFormat()
         {
-            string[] inputs = { "Rakesh@5" };
-            string pattern = "^[A-Za-z]{6,}@?[0-9]{1,}$";
+            string[] inputs = { "RAKESH@195" };
+            string pattern = "^[A-Z]{6,}@?[0-9]{3,}$";
 
             Regex regex = new Regex(pattern);
 
@@ -26,7 +26,7 @@ namespace UserRegistrationProblems
         }
         static void Main(string[] args)
         {
-            passowordFormat();
+            UpperCaseFormat();
         }
 
     }
