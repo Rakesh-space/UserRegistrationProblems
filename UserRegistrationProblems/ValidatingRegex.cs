@@ -5,9 +5,9 @@ namespace UserRegistrationProblems
 {
     class ValidatingRegex
     {
-        public static void validFirstName()
+        public static void validLastName()
         {
-            string[] inputs = { "Rakesh" };
+            string[] inputs = { "Musale" };
             string pattern = "^[A-Za-z]{3,}$";
 
             Regex regex = new Regex(pattern);
@@ -27,7 +27,7 @@ namespace UserRegistrationProblems
 
         static void Main(string[] args)
         {
-            Console.WriteLine("\n Welcome User Registration Problem..");
+            validLastName();
         }
 
     }
