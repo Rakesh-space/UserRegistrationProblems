@@ -5,10 +5,10 @@ namespace UserRegistrationProblems
 {
     class ValidatingRegex
     {
-        public static void UpperCaseFormat()
+        public static void OneNumeric()
         {
-            string[] inputs = { "RAKESH@195" };
-            string pattern = "^[A-Z]{6,}@?[0-9]{3,}$";
+            string[] inputs = { "5Rakesh@195" };
+            string pattern = "^[0-9]{1,}[a-zA-Z]{6,}@?[0-9]{3,}$";
 
             Regex regex = new Regex(pattern);
 
@@ -23,10 +23,11 @@ namespace UserRegistrationProblems
                     Console.WriteLine(word + "--->Invalid");
                 }
             }
+
         }
         static void Main(string[] args)
         {
-            UpperCaseFormat();
+            OneNumeric();
         }
 
     }
