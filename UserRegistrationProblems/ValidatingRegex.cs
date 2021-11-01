@@ -5,10 +5,10 @@ namespace UserRegistrationProblems
 {
     class ValidatingRegex
     {
-        public static void validEmail()
+        public static void mobileFormat()
         {
-            string[] inputs = { "rakeshmusale111@gmail.com" };
-            string pattern = "^[a-z0-9]{15}@?gmail.com$";
+            string[] inputs = { "91 8007078569" };
+            string pattern = "^[a-z0-9]{2,} [0-9]{10}$";
 
             Regex regex = new Regex(pattern);
 
@@ -24,10 +24,9 @@ namespace UserRegistrationProblems
                 }
             }
         }
-
         static void Main(string[] args)
         {
-            validEmail();
+            mobileFormat();
         }
 
     }
