@@ -5,29 +5,17 @@ namespace UserRegistrationProblems
 {
     class ValidatingRegex
     {
-        public static void SpecialCharcter()
+        public static void AllRegexOutPut()  //UC9 regex all output here
         {
-            string[] inputs = { "#5Rakesh@195" };
-            string pattern = "^#*[0-9]{1,}[a-zA-Z]{6,}@?[0-9]{3,}$";
 
-            Regex regex = new Regex(pattern);
-
-            foreach (string word in inputs)
-            {
-                if (regex.IsMatch(word))
-                {
-                    Console.WriteLine(word + "-->Valid");
-                }
-                else
-                {
-                    Console.WriteLine(word + "--->Invalid");
-                }
-            }
+                Rakesh-- > Valid
+                Musale-- > Valid
+                rakeshmusale111 @gmail.com-- > Valid
+                91 8007078569-- > Valid
+                Rakesh@5-- > Valid
+                RAKESH@195-- > Valid
+                5Rakesh@195-- > Valid
+                #5Rakesh@195-->Valid
         }
-        static void Main(string[] args)
-        {
-            SpecialCharcter();
-        }
-
     }
 }
