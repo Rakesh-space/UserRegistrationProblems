@@ -5,10 +5,10 @@ namespace UserRegistrationProblems
 {
     class ValidatingRegex
     {
-        public static void mobileFormat()
+        public static void passowordFormat()
         {
-            string[] inputs = { "91 8007078569" };
-            string pattern = "^[a-z0-9]{2,} [0-9]{10}$";
+            string[] inputs = { "Rakesh@5" };
+            string pattern = "^[A-Za-z]{6,}@?[0-9]{1,}$";
 
             Regex regex = new Regex(pattern);
 
@@ -26,7 +26,7 @@ namespace UserRegistrationProblems
         }
         static void Main(string[] args)
         {
-            mobileFormat();
+            passowordFormat();
         }
 
     }
