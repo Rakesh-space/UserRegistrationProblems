@@ -5,29 +5,69 @@ namespace UserRegistrationProblems
 {
     class ValidatingRegex
     {
-        public static void mobileFormat()
-        {
-            string[] inputs = { "91 8007078569" };
-            string pattern = "^[a-z0-9]{2,} [0-9]{10}$";
-
-            Regex regex = new Regex(pattern);
-
-            foreach (string word in inputs)
+            //We are using this method to match pattern of first name
+            public static void FirstName(string name)
             {
-                if (regex.IsMatch(word))
+                string firstname = "^[A-Z]{1}[a-zA-Z]{2}$";  //Expression for first letter is capital and maximum charactor is 3
+                Regex regex = new Regex(firstname);
+
+                if (regex.IsMatch(name))
                 {
-                    Console.WriteLine(word + "-->Valid");
+                    Console.WriteLine(name + "-->Valid");
                 }
                 else
                 {
-                    Console.WriteLine(word + "--->Invalid");
+                    Console.WriteLine(name + "--->Invalid");
                 }
             }
-        }
-        static void Main(string[] args)
-        {
-            mobileFormat();
-        }
 
+           //We are using this method to match pattern of last name
+            public static void LastName(string name)
+            {
+                string lastname = "^[A-Z]{1}[a-zA-Z]{2}$";      //Expression for first letter is capital and maximum charactor is 3
+                Regex regex = new Regex(lastname);
+
+                if (regex.IsMatch(name))
+                {
+                    Console.WriteLine(name + "-->Valid");
+                }
+                else
+                {
+                    Console.WriteLine(name + "--->Invalid");
+                }
+            }
+           //This method for validation of email id
+            public static void ValidEmail(string mail)
+            {
+                string emailid = "^[a-z]{3}[.][a-z0-9]*[@]{1}[bl]{2}[.]{1}[co]{2}[.]{1}[a-z]*$";  //Expression for Validating Email
+            Regex regex = new Regex(emailid);
+
+                if (regex.IsMatch(mail))
+                {
+                    Console.WriteLine(mail + "-- > Valid");
+                }
+                else
+                {
+                    Console.WriteLine(mail + "-- > InValid");
+                }
+
+            }
+
+          //We are using this method to match pattern of mobile no
+           public static void mobileFormat(string number)
+            {
+                string Mobnumber = "^[0-9]{1,2}[ ]{1}[0-9]{10}$";  //Expression for Validating mobileFormating
+            Regex regex = new Regex(Mobnumber);
+
+                if (regex.IsMatch(number))
+                {
+                    Console.WriteLine(number + "-- > Valid");
+                }
+                else
+                {
+                    Console.WriteLine(number + "-- > InValid");
+                }
+
+        }
     }
 }
