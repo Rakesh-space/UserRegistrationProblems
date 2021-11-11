@@ -5,30 +5,20 @@ namespace UserRegistrationProblems
 {
     class ValidatingRegex
     {
-        public static void validFirstName()
+        //We are using this method to match pattern of first name
+        public static void validFirstName(string name)
         {
-            string[] inputs = { "Rakesh" };
-            string pattern = "^[A-Za-z]{3,}$";
+                string firstname = "^[A-Z]{1}[a-zA-Z]{2}$";  //Expression for first letter is capital and maximum charactor is 3
+                Regex regex = new Regex(firstname);
 
-            Regex regex = new Regex(pattern);
-
-            foreach (string word in inputs)
-            {
-                if (regex.IsMatch(word))
+                if (regex.IsMatch(name))
                 {
-                    Console.WriteLine(word + "-->Valid");
+                    Console.WriteLine(name + "-->Valid");
                 }
                 else
                 {
-                    Console.WriteLine(word + "--->Invalid");
-                }
-            }
+                    Console.WriteLine(name + "--->Invalid");
+                }       
         }
-
-        static void Main(string[] args)
-        {
-            Console.WriteLine("\n Welcome User Registration Problem..");
-        }
-
     }
 }
