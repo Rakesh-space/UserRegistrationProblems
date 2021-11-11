@@ -5,29 +5,53 @@ namespace UserRegistrationProblems
 {
     class ValidatingRegex
     {
-        public static void validEmail()
+        //We are using this method to match pattern of first name
+        public static void FirstName(string name)
         {
-            string[] inputs = { "rakeshmusale111@gmail.com" };
-            string pattern = "^[a-z0-9]{15}@?gmail.com$";
+            string firstname = "^[A-Z]{1}[a-zA-Z]{2}$";  //Expression for first letter is capital and maximum charactor is 3
+            Regex regex = new Regex(firstname);
 
-            Regex regex = new Regex(pattern);
-
-            foreach (string word in inputs)
+            if (regex.IsMatch(name))
             {
-                if (regex.IsMatch(word))
-                {
-                    Console.WriteLine(word + "-->Valid");
-                }
-                else
-                {
-                    Console.WriteLine(word + "--->Invalid");
-                }
+                Console.WriteLine(name + "-->Valid");
+            }
+            else
+            {
+                Console.WriteLine(name + "--->Invalid");
             }
         }
 
-        static void Main(string[] args)
+        //We are using this method to match pattern of last name
+        public static void LastName(string name)
         {
-            validEmail();
+            string lastname = "^[A-Z]{1}[a-zA-Z]{2}$";      //Expression for first letter is capital and maximum charactor is 3
+            Regex regex = new Regex(lastname);
+
+            if (regex.IsMatch(name))
+            {
+                Console.WriteLine(name + "-->Valid");
+            }
+            else
+            {
+                Console.WriteLine(name + "--->Invalid");
+            }
+        }
+        //This method for validation of email id
+        public static void ValidEmail(string mail)
+            {
+                string emailid = "^[a-z]{3}[.][a-z0-9]*[@]{1}[bl]{2}[.]{1}[co]{2}[.]{1}[a-z]*$";
+                Regex regex = new Regex(emailid);
+
+                if (regex.IsMatch(mail))
+                {
+                    Console.WriteLine(mail+"-- > Valid");
+                }
+                else
+                {
+                    Console.WriteLine(mail + "-- > InValid");
+                }
+
+            }
         }
 
     }
